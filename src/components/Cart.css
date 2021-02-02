@@ -1,6 +1,8 @@
 .image{
     width: 250px;
     height: 200px;
+    margin-bottom: 9px;
+    margin-top: -16px;
 }
 
 h1{
@@ -18,4 +20,18 @@ h2{
     margin-right: 50px;
     margin-left: 81px;
     margin-top: 0px;
+}
+
+.action_buttons{
+    margin-left: 39px;
+    padding: 1rem;
+}
+
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 91px;
+    font-weight: bolder;
+    padding: 3px;
 }

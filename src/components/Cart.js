@@ -42,23 +42,24 @@ import './Cart.css';
         return (
             
             <div>
-                <div className="container">
+                
                 <h1>Shopping Cart</h1>
                 <div className="image_container">
+                <h2>{title}</h2>
                     <img className="image" src="https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBOPPO-A12-3-GFUTU629745E657DA2D/1591384302184_0..png" alt="mobile"/>
-                </div>
-                <div className="details_container">
                     
-                        <h2>{title}</h2>
-                       <span>Rs: {price}</span> 
-                      <span>{qty}</span>  
-                  
+                      
                 </div>
-                </div>
-                <div className="action_buttons">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1612200714~hmac=3510e427679116250bc145a47c2117e8" alt="plus" onClick={this.increaseQuantity}/>
-                <img src ="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1612200938~hmac=f505ad6c24e7e15a371d778cb0dc3366" alt="minus" onClick={this.decreaseQuantity}/>
+                <div className="details"><span>Rs: {price}</span> 
+                      <span>Qty: {qty}</span> </div>
+                 
                 
+                
+                <div className="action_buttons">
+                <img src="https://www.flaticon.com/svg/vstatic/svg/1828/1828926.svg?token=exp=1612269239~hmac=2a68712fadabe940ed70bc36c727c94c" alt="plus" onClick={this.increaseQuantity}/>
+                <img src ="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1612269286~hmac=fa40f4eda507e5df2fc4f4c54dcb8119" alt="minus" onClick={this.decreaseQuantity}/>
+                
+                <img src="https://www.flaticon.com/svg/vstatic/svg/1214/1214428.svg?token=exp=1612269328~hmac=f0a56c4779f0ba080fc01576107d1190" alt="bin" />
                 </div>
              </div>
         )
