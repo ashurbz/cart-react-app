@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CartItem from "./CartItem";
+import CartItem from './CartItem';
 
 class Cart extends Component {
   constructor() {
@@ -54,13 +54,22 @@ class Cart extends Component {
       })}
   }
 
+  handleDeleteQuantity =(id)=>{
+    const {products} = this.state;
+    const items = products.filter((item)=>item.id !== id)
+    this.setState({
+      products:items
+    })
+  }
+
   render() {
     const { products } = this.state;
     return (
       <div>
         {products.map((product) => {
           return <CartItem product={product} key={product.id}
-          onIncrease={this.handleIncreaseQuantity} onDecrease={this.handleDecreaseQuantity} />;
+          onIncrease={this.handleIncreaseQuantity} onDecrease={this.handleDecreaseQuantity}
+          onDeleteQuantity ={this.handleDeleteQuantity} />;
         })}
       </div>
     );
