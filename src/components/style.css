@@ -40,7 +40,7 @@ h2{
 .navBar{
     display: flex;
     flex-direction: row-reverse;
-    background-color: blue;
+    background-color:cyan;
 }
 
 .navBar img{
