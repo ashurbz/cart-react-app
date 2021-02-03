@@ -1,5 +1,5 @@
 import React from "react";
-import "./CartItem.css";
+import "./style.css";
 
  const CartItem = (props) => {
 
@@ -8,7 +8,7 @@ import "./CartItem.css";
   
       return (
         <div>
-          <h2>Shopping Cart</h2>
+          
           <div className="image_container">
             <h2>{title}</h2>
             <img className="image" src={img} alt="mobile" />

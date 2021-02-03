@@ -8,21 +8,21 @@ class Cart extends Component {
       products: [
         {
           title: "Phone",
-          img: "",
+          img: "https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBOPPO-F17-PROFUTU629745BED6286A/0..png",
           price: 999,
           qty: 1,
           id: 1,
         },
         {
           title: "Watch",
-          img: "",
+          img: "https://fossil.scene7.com/is/image/FossilPartners/FS5731-alt?$sfcc_fos_medium$",
           price: 99,
           qty: 4,
           id: 2,
         },
         {
           title: "Laptop",
-          img: "",
+          img: "https://cdn.vox-cdn.com/thumbor/U9bVQsVE1qeyj04xJ-YAPuVheBw=/0x0:2040x1351/1200x800/filters:focal(857x513:1183x839)/cdn.vox-cdn.com/uploads/chorus_image/image/65169322/VLS_2759.0.jpg",
           price: 9999,
           qty: 3,
           id: 3,

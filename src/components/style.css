@@ -36,3 +36,13 @@ h2{
     font-weight: bolder;
     padding: 3px;
 }
+
+.navBar{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: blue;
+}
+
+.navBar img{
+    margin-right: 22px;
+}
