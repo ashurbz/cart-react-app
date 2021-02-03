@@ -31,12 +31,36 @@ class Cart extends Component {
     };
   }
 
+  handleIncreaseQuantity=(product)=>{
+    
+        const{products} =this.state;
+        const index = products.indexOf(product);
+        products[index].qty++;
+
+        this.setState({
+            products:products
+        })
+  
+  }
+
+  handleDecreaseQuantity =(product)=>{
+      const {products} = this.state;
+      const index = products.indexOf(product);
+      if(products[index].qty>0){
+      products[index].qty--;
+
+      this.setState({
+          products:products
+      })}
+  }
+
   render() {
     const { products } = this.state;
     return (
       <div>
         {products.map((product) => {
-          return <CartItem product={product} key={product.id} />;
+          return <CartItem product={product} key={product.id}
+          onIncrease={this.handleIncreaseQuantity} onDecrease={this.handleDecreaseQuantity} />;
         })}
       </div>
     );
