@@ -63,11 +63,22 @@ class App extends Component {
       products:items
     })
   }
+
+  handleCart =()=>{
+    const {products} =this.state;
+    let count =0;
+   products.forEach((product)=>{
+    count = count+product.qty;
+   })
+
+   
+    return count;
+  }
   render(){
     const{products} = this.state;
   return (
     <div className="App">
-      <Nav/>
+      <Nav cartQty={this.handleCart()}/>
      <Cart
      products={products}
      onIncrease={this.handleIncreaseQuantity} onDecrease={this.handleDecreaseQuantity}
