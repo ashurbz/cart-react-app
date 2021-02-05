@@ -74,6 +74,15 @@ class App extends Component {
    
     return count;
   }
+
+  totalPrice=()=>{
+    const{products} =this.state;
+    let priceCount =0;
+    products.forEach((product)=>{
+      priceCount = priceCount+product.qty *product.price
+    })
+    return priceCount;
+  }
   render(){
     const{products} = this.state;
   return (
@@ -84,6 +93,8 @@ class App extends Component {
      onIncrease={this.handleIncreaseQuantity} onDecrease={this.handleDecreaseQuantity}
      onDeleteQuantity ={this.handleDeleteQuantity}
      />
+        <span>Total Price:{this.totalPrice()}</span>
+
     </div>
   );
 }
